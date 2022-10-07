@@ -1,10 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
+set (CMAKE_CXX_STANDARD 11)
 
 project(WeekendRayTracer)
 
-file(GLOB all_srcs
-        "${PROJECT_SOURCE_DIR}/src/*.cpp"
-        "${PROJECT_SOURCE_DIR}/include/*.hpp"
-    )
-
-add_executable(raytracer ${all_srcs})
+add_subdirectory(${PROJECT_SOURCE_DIR}/src)
